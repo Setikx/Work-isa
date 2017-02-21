@@ -1,0 +1,46 @@
+
+
+#slider-tweets {
+  margin-top: 56px;
+
+  &:before {
+    @include oneline-sprite-box($icons, tw);
+    @include pseudo-block($top:-29px, $left:48%);
+  }
+
+  .flex-direction-nav .flex-prev {
+    left: -12%;
+    top: -32%;
+    @include oneline-sprite-box($icons, arrow-tweets);
+  }
+
+  .flex-direction-nav .flex-next {
+    @include oneline-sprite-box($icons, arrow-tweets);
+    @include transform (rotate(180deg));
+    top: -32%;
+    right: -11.5%;
+  }
+
+  .flex-control-nav, .flex-control-paging {
+    display: none;
+  }
+  p {
+    font-style: italic;
+    font-weight: 200;
+    color: #1f1f20;
+    text-align: justify;
+    line-height: 200%;
+
+    q {
+      color: white;
+      quotes: none;
+    }
+
+    a {
+      display: inline-block;
+      color: #1f1f20;
+    }
+  }
+}
+
+

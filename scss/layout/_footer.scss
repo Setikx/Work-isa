@@ -1,0 +1,93 @@
+footer {
+  background-color: #232324;
+}
+
+.designed-socials-bl-inner {
+  width: 950px;
+  height: 48px;
+  margin: 0 auto;
+
+  p {
+    display: inline-block;
+    color: #ffffff;
+    line-height: 48px;
+    vertical-align: middle;
+    margin: 0;
+
+
+    span {
+      color: #eb4f4e;
+    }
+  }
+
+  .socials {
+    display: inline-block;
+    float: right;
+    margin-top: 7px;
+
+    a {
+      display: inline-block;
+      height: 28px;
+      width: 28px;
+      margin: 0px 2px;
+      background-color: #eb4f4e;
+      text-indent: -999999px;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include border-radius (2px);
+
+      &:first-child {
+        background-image: url('../../theme/images/icons/fb.png');
+      }
+
+      &:nth-child(2) {
+        background-image: url('../../theme/images/icons/tw-soc.png');
+      }
+
+      &:last-child {
+        margin-right: 0;
+        background-image: url('../../theme/images/icons/rss.png');
+      }
+    }
+  }
+}
+
+.b-contacts-map {
+  background-color: #61af66;
+  padding-top: 50px;
+  height: 250px;
+
+  .contacts {
+    width: 618px;
+    margin: 0 auto;
+    padding: 15px 40px 25px 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    @include border-radius (5px);
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      background-color: inherit;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 200;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 20px 0 0 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+}

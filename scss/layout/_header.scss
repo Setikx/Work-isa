@@ -1,0 +1,111 @@
+header{
+  background-color: #f56262;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    height: 63px;
+    width: 63px;
+    background-image: url('../../theme/images/tmp/list-corner.jpg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  &:after {
+    content: '';
+    height: 126px;
+    width: 63px;
+    background-color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 23px;
+    right: -43px;
+    @include transform (rotate(135deg));
+    z-index: 99;
+  }
+
+  .header-inner {
+    width: 970px;
+    margin: 0 auto;
+    padding: 25px 10px 20px 10px;
+    word-spacing: 0px;
+
+    .left-side {
+      display: inline-block;
+      width: 25%;
+      margin: 0 -4px;
+
+      .logo-block {
+
+        a {
+
+          img {
+            display: inline-block;
+          }
+
+          span {
+            display: inline-block;
+            font-size: 35px;
+            color: white;
+            letter-spacing: 3px;
+            margin-left: 5px;
+          }
+        }
+
+        span {
+          display: block;
+          color: white;
+          margin-left: 3px;
+          letter-spacing: 0.1px;
+        }
+      }
+    }
+
+    .right-side {
+      display: inline-block;
+      width: 75%;
+      margin: 0 -4px;
+
+      nav {
+
+        ul {
+          margin: 20px 0 20px 0;
+          padding: 0;
+          display: table;
+          word-spacing: 0px;
+          float: right;
+
+          li {
+            display: inline-block;
+
+            &:not(:last-child) {
+              margin: 0 17px;
+              word-spacing: 16px;
+            }
+
+            &:last-child {
+              margin-right: -18px;
+            }
+
+            &:hover {
+
+              a {
+                background-color: #000000;
+              }
+            }
+
+            a {
+              color: white;
+              padding: 5px 12px;
+              @include border-radius (4px);
+              font-size: 18px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

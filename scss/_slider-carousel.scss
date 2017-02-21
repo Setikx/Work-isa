@@ -1,0 +1,135 @@
+
+/* Оформление слайда */
+#slider-carousel ul li ul {
+  width: 100%;
+  padding: 8px 0 0 0;
+  margin: 24px 0 0 0;
+  word-spacing: 0;
+  display: table;
+  text-align: left;
+
+  li {
+    display: inline-block;
+    word-spacing: normal;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      img {
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        border-radius: 5px;
+      }
+
+      p {
+        margin: 20px 0 0 0;
+        font-size: 21px;
+        color: #232324;
+        font-weight: bold;
+
+        span {
+          text-transform: uppercase;
+        }
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+  }
+}
+
+
+/* Стрелки лево/право*/
+
+#slider-carousel .flex-direction-nav .flex-prev {
+  @include oneline-sprite-box($icons, carousel-arrow);
+  left: -14.5%;
+  top: 50%;
+}
+#slider-carousel .flex-direction-nav .flex-next {
+  @include oneline-sprite-box($icons, carousel-arrow);
+  right: -14.5%;
+  top: 50%;
+  transform: rotate(180deg);
+}
+
+
+
+#slider-carousel {
+
+  .flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -48px;
+    text-align: center;
+  }
+
+  .flex-control-nav li {
+    margin: 0 6px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+
+  .flex-control-paging li a {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: #616161;
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+
+  .flex-control-paging li a:hover {
+    background: #333;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .flex-control-paging li a.flex-active {
+    background: #6cc372;
+    cursor: default;
+  }
+
+  .flex-control-thumbs {
+    margin: 5px 0 0;
+    position: static;
+    overflow: hidden;
+  }
+
+  .flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0;
+  }
+
+  .flex-control-thumbs img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .7;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  .flex-control-thumbs img:hover {
+    opacity: 1;
+  }
+
+  .flex-control-thumbs .flex-active {
+    opacity: 1;
+    cursor: default;
+  }
+}
